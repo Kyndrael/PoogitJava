@@ -1,1 +1,39 @@
+@startuml
 
+title Diagrama UML - iPhone
+
+interface ReprodutorMusical {
+    + tocar()
+    + pausar()
+    + selecionarMusica(String musica)
+}
+
+interface AparelhoTelefonico {
+    + ligar(String numero)
+    + atender()
+    + iniciarCorreioVoz()
+}
+
+interface NavegadorInternet {
+    + exibirPagina(String url)
+    + adicionarNovaAba()
+    + atualizarPagina()
+}
+
+class IPhone {
+    + tocar()
+    + pausar()
+    + selecionarMusica(String musica)
+    + ligar(String numero)
+    + atender()
+    + iniciarCorreioVoz()
+    + exibirPagina(String url)
+    + adicionarNovaAba()
+    + atualizarPagina()
+}
+
+IPhone ..|> ReprodutorMusical
+IPhone ..|> AparelhoTelefonico
+IPhone ..|> NavegadorInternet
+
+@enduml
